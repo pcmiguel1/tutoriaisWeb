@@ -1,0 +1,29 @@
+main section {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+}
+
+#units {
+  width: 50%;
+  border-collapse: collapse;
+}
+
+#units td, #units th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#units tr:nth-child(even) { background-color: #f2f2f2; }
+
+#units tr:hover { background-color: #ddd; }
+
+#units th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: blueviolet;
+  color: white;
+}

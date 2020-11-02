@@ -3,28 +3,20 @@
 <head>
   <title>Express</title>
   <link rel="stylesheet" href="/stylesheets/style.css">
+  <link rel="stylesheet" href="/stylesheets/style-units.css">
 </head>
 
 <body>
   <header>
-    <a href="index.html"><img src="./images/student.png"/></a>
+    <a href="index.html"><img id="student_avatar" src="./images/student.png"/></a>
     <section>
       <h1>Learning Platform</h1>
       <h4>Unit List</h4>
     </section>
   </header>
-  <nav>
-    <a href="">See available units and students</a>
-    <a href="">Grade a student</a>
-    <a href="#footer">Contacts</a>
-  </nav>
-  <aside>
-    <a href="https://www.dges.gov.pt">DGES</a>
-    <a href="https://www.iade.europeia.pt">IADE</a>
-  </aside>
   <main>
     <section>
-      <table>
+      <table id="units">
         <tr>
           <th>Name</th>
           <th>ECTS</th>
@@ -67,12 +59,16 @@
           <td>3</td>
           <td>1</td>
         </tr>
+        <tr>
+          <th>Name</th>
+          <th>ECTS</th>
+          <th>Year</th>
+          <th>Semester</th>
+        </tr>
       </table>
     </section>
   </main>
-  <footer id="footer">
-    <p>Contact us by email ( <a href="mailto:admin@ensino.pt">admin@ensino.pt</a> ) or telephone ( <a href="tel:2112312312">2112312312</a> )</p>
-  </footer>
+
 </body>
 
 </html>
