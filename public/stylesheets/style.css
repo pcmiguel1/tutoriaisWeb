@@ -14,12 +14,12 @@ body {
 
 .grid {
   display: grid;
-  grid-template-columns: 20% auto auto auto auto auto 20%;
+  grid-template-columns: 20% auto 20%;
   grid-template-rows: auto;
   grid-template-areas: 
-    'header header header header header header header'
-    'nav main main main main main aside'
-    'footer footer footer footer footer footer footer';
+    'header header header'
+    'nav main aside'
+    'footer footer footer';
 }
 
 a {
