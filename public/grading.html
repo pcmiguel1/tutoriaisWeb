@@ -3,62 +3,29 @@
 <head>
   <title>Express</title>
   <link rel="stylesheet" href="/stylesheets/style.css">
+  <script src="/javascripts/grading.js"></script>
 </head>
 
 <body>
-  <header>
-    <a href="index.html"><img src="./images/student.png"/></a>
-    <section>
-      <h1>Learning Platform</h1>
-      <h4>Unit List</h4>
-    </section>
-  </header>
   <main>
     <section>
-      <table>
-        <tr>
-          <th>Name</th>
-          <th>ECTS</th>
-          <th>Year</th>
-          <th>Semester</th>
-        </tr>
-        <tr>
-          <td>Programação Web</td>
-          <td>6</td>
-          <td>3</td>
-          <td>1</td>
-        </tr>
-        <tr>
-          <td>CRM</td>
-          <td>3</td>
-          <td>3</td>
-          <td>1</td>
-        </tr>
-        <tr>
-          <td>Interfaces e Usabilidade</td>
-          <td>6</td>
-          <td>3</td>
-          <td>1</td>
-        </tr>
-        <tr>
-          <td>Gestão de Projetos Informáticos</td>
-          <td>6</td>
-          <td>3</td>
-          <td>1</td>
-        </tr>
-        <tr>
-          <td>Sistemas de Informação Geográficos</td>
-          <td>3</td>
-          <td>3</td>
-          <td>1</td>
-        </tr>
-        <tr>
-          <td>Análise de Sistemas</td>
-          <td>6</td>
-          <td>3</td>
-          <td>1</td>
-        </tr>
-      </table>
+      <form>
+        <label for="student_name">Student Name:</label>
+        <input type="text" id="student_name" name="student_name"><br>
+        <label for="unit_name">Unit Name:</label>
+        <input type="text" id="unit_name" name="unit_name"><br>
+        <label for="project_grade">Project grade:</label>
+        <input type="number" id="project_grade" min="0" max="20" step="0.1" name="project_grade">
+        <label for="percentage_project">Percentage:</label>
+        <input type="number" id="percentage_project" min="0" max="1" step="0.1" name="percentage_project"><br>
+        <label for="test_grade">Test grade:</label>
+        <input type="number" id="test_grade" min="0" max="20" step="0.1" name="test_grade">
+        <label for="percentage_test">Percentage:</label>
+        <input type="number" id="percentage_test" min="0" max="1" step="0.1" name="percentage_test"><br>
+        <input type="button" value="Calculate" onclick="calculate();">
+        <input type="button" value="Reset" onclick="resetInputs();">
+      </form>
+      <p id="result"></p>
     </section>
   </main>
 </body>
