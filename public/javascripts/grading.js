@@ -8,7 +8,7 @@ function resetInputs() {
     document.getElementById("percentage_test").value = "";
 
     document.getElementById("result").innerHTML = "";
-    
+
 }
 
 function calculate() {
