@@ -1,5 +1,5 @@
 
-main{
+main {
     width: 100%;
     display: flex;
     justify-content: center;
@@ -11,7 +11,7 @@ main{
     margin-top: 20px;
 }
 
-input[type=text], input[type=number] {
+input[type=text], input[type=number], select {
     width: 100%;
     padding: 12px 20px;
     border: 1px solid #ccc;
