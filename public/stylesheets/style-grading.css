@@ -34,3 +34,8 @@ input[type=button] {
 input[type=button]:hover {
     background-color: darkorchid;
 }
+
+#form_grading form p {
+    display: none;
+    color: red;
+}

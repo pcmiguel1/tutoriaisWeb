@@ -1,0 +1,14 @@
+
+main {
+    display: flex;
+}
+
+.student_box {
+    width: 150px;
+    background-color: cornflowerblue;
+    color: blueviolet;
+    padding: 10px 20px;
+    margin-top: 20px;
+    margin-left: 20px;
+    cursor: pointer;
+}
