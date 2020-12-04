@@ -25,7 +25,7 @@ module.exports.getStudent = async function(stud_id) {
         sql = "SELECT dis_id AS id, dis_nome AS name, dis_creditos AS ects, pla_semestre AS semester, ins_nota AS grade, ins_id FROM disciplinas, planoestudos, inscricoes WHERE dis_id = pla_dis_id AND ins_pla_dis_id = pla_dis_id AND ins_alu_id = ? AND pla_cur_id = ?";
         infoStudent.grades = await pool.query(sql, [ stud_id, courseId ]);
 
-        return student;
+        return infoStudent;
     } catch (err) {
         console.log(err);
         return err;

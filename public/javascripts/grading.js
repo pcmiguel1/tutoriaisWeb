@@ -1,19 +1,4 @@
 
-//Student information
-var students = [
-    { name: "Mary", number: 50037237 },
-    { name: "John", number: 50037238 },
-    { name: "Anthony", number: 50037239 }
-];
-
-var units = [
-    { unit: "Mathematics", semester: 3, etcs: 6 },
-    { unit: "Literature", semester: 2, etcs: 6 },
-    { unit: "Laws", semester: 1, etcs: 3 },
-    { unit: "Informatics", semester: 1, etcs: 6 },
-    { unit: "Cooking", semester: 2, etcs: 3 }
-];
-
 window.onload = function () {
 
     //Colocar as options no select student_name
@@ -25,20 +10,51 @@ window.onload = function () {
 
 }
 
-function selectStudents() {
-    let aux = "";
-    for (let i in students) {
-        aux += "<option value='"+ i +"'>" + students[i].name + "</option>";
+async function selectStudents() {
+
+    try {
+
+        let students = await $.ajax({
+            url: "/api/students",
+            method: "get",
+            dataType: "json"
+        });
+
+        let aux = "";
+        for (let student of students) {
+            aux += "<option value='"+ student.id +"'>" + student.name + "</option>";
+        }
+        document.getElementById("student_name").innerHTML = aux;
+
+
+    } catch(err) {
+        console.log(err);
     }
-    document.getElementById("student_name").innerHTML = aux;
+
 }
 
-function selectUnits() {
-    let aux = "";
-    for (let i in units) {
-        aux += "<option value='"+ i +"'>" + units[i].unit + "</option>";
+async function selectUnits() {
+
+    try {
+
+        let units = await $.ajax({
+            url: "/api/units",
+            method: "get",
+            dataType: "json"
+        });
+
+        let aux = "";
+
+        for (let unit of units) {
+            aux += "<option value='"+ unit.id +"'>" + unit.name + "</option>";
+        }
+        document.getElementById("unit_name").innerHTML = aux;
+
+
+    } catch(err) {
+        console.log(err);
     }
-    document.getElementById("unit_name").innerHTML = aux;
+
 }
 
 
